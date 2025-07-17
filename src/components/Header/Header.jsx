@@ -1,4 +1,3 @@
-import react from "react";
 import styled from "styled-components";
 import pokedexLogo from "../../assets/images/pokedexlogo.png";
 
