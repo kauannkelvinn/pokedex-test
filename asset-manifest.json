@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/kauannkelvinn/pokedex-test/static/css/main.15a59d5b.css",
+    "main.js": "/kauannkelvinn/pokedex-test/static/js/main.e33372a0.js",
+    "static/js/453.28f426c9.chunk.js": "/kauannkelvinn/pokedex-test/static/js/453.28f426c9.chunk.js",
+    "static/media/pokedexlogo.png": "/kauannkelvinn/pokedex-test/static/media/pokedexlogo.2e63f85e20b50c005bef.png",
+    "index.html": "/kauannkelvinn/pokedex-test/index.html",
+    "main.15a59d5b.css.map": "/kauannkelvinn/pokedex-test/static/css/main.15a59d5b.css.map",
+    "main.e33372a0.js.map": "/kauannkelvinn/pokedex-test/static/js/main.e33372a0.js.map",
+    "453.28f426c9.chunk.js.map": "/kauannkelvinn/pokedex-test/static/js/453.28f426c9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.15a59d5b.css",
+    "static/js/main.e33372a0.js"
+  ]
+}
