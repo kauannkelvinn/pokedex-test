@@ -8,10 +8,10 @@ export function Header() {
                 <img src={pokedexLogo} alt="Pokédex Logo" />
             </Logo>
             <Menu>
-                <a href="/">Home</a>
-                <a href="/">Cards</a>
-                <a href="/">Sobre</a>
-                <a href="/">Contato</a>
+                <a href="#hero">Home</a>
+                <a href="#cards">Cards</a>
+                <a href="#footer">Sobre</a>
+                <a href="#footer">Contato</a>
             </Menu>
         </Nav>
     )

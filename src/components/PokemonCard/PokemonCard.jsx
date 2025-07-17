@@ -6,8 +6,8 @@ export function PokemonCard({ name, image, type, description, }) {
         <Card type={type}>
             <PokemonImage src={image} alt={name} />
             <PokemonName>{name}</PokemonName>
-            <PokemonDescription>{description}</PokemonDescription>
             <PokemonType>{type}</PokemonType>
+            <PokemonDescription>{description}</PokemonDescription>
         </Card>
     )
 };

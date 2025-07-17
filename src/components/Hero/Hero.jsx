@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export function Hero() {
     return (
-        <HeroSection>
+        <HeroSection id="hero">
             <Content>
                 <h1>Descubra, Colecione, Conquiste</h1>
                 <p>Explore o universo Pokémon e encontre seus cards favoritos!</p>

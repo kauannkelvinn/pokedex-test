@@ -6,7 +6,7 @@ export function CardsGrid() {
     const [pokemons, setPokemons] = useState([]);
     const [offset, setOffset] = useState(0);
     const [loading, setLoading] = useState(false);
-    const limit = 12;
+    const limit = 18;
 
     async function fetchPokemons(offsetValue = 0) {
         try {
@@ -63,7 +63,7 @@ export function CardsGrid() {
 
     return (
         <>
-            <Grid>
+            <Grid id="cards">
                 {pokemons.map((pokemon) => (
                     <PokemonCard
                         key={pokemon.name}
@@ -99,8 +99,8 @@ const ButtonWrapper = styled.div`
 `;
 
 const ReloadButton = styled.button`
-  margin: 2rem auto; /* auto nas laterais */
-  display: block; /* força comportamento de bloco */
+  margin: 2rem auto;
+  display: block; 
   padding: 0.5rem 1rem;
   cursor: pointer;
   font-weight: bold;
@@ -110,7 +110,7 @@ const ReloadButton = styled.button`
   color: white;
   transition: background-color 0.3s;
 
-  grid-column: 1 / -1; /* ocupa toda a linha */
+  grid-column: 1 / -1;
 
   &:hover:not(:disabled) {
     background-color: #d32f2f;

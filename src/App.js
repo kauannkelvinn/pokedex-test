@@ -1,8 +1,8 @@
 import './App.css';
 import { Header } from './components/Header/Header';
- import { Hero } from './components/hero/Hero';
+ import { Hero  } from './components/Hero/Hero';
 import { CardsGrid } from './components/CardsGrid/CardsGrid';
-// import { Footer } from './components/Footer/Footer';
+import { Footer } from './components/footer/Footer.jsx';
 
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
     <Header />
     <Hero /> 
     <CardsGrid />
-    {/* <Footer /> */}
+    <Footer />
    </>
   );
 }
