@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import styled from "styled-components";
 import { PokemonCard } from "../PokemonCard/PokemonCard";
 import { Grid, ButtonWrapper, ReloadButton } from "../CardsGrid/CardsGrid.styles";
+import { Link } from "react-router-dom";
 
 export function CardsGrid() {
     const [pokemons, setPokemons] = useState([]);
@@ -36,6 +36,7 @@ export function CardsGrid() {
                         .trim();
 
                     return {
+                        id: details.id,
                         name: details.name,
                         image: details.sprites.front_default,
                         description: cleanDescription || "No description available.",
@@ -66,20 +67,26 @@ export function CardsGrid() {
         <>
             <Grid id="cards">
                 {pokemons.map((pokemon) => (
-                    <PokemonCard
-                        key={pokemon.name}
-                        name={pokemon.name}
-                        image={pokemon.image}
-                        description={pokemon.description}
-                        type={pokemon.type}
-                    />
+                    <React.Fragment key={pokemon.name}>
+                        <Link
+                            to={`/pokemon/${pokemon.id}`}
+                            style={{ textDecoration: 'none' }}
+                        >
+                        <PokemonCard
+                            name={pokemon.name}
+                            image={pokemon.image}
+                            description={pokemon.description}
+                            type={pokemon.type}
+                        />
+                        </Link>
+                    </React.Fragment>
                 ))}
             </Grid>
-                <ButtonWrapper>
-                    <ReloadButton onClick={handleReload} disabled={loading}>
-                        {loading ? "Carregando..." : "Recarregar Pokémons"}
-                    </ReloadButton>
-                </ButtonWrapper>
+            <ButtonWrapper>
+                <ReloadButton onClick={handleReload} disabled={loading}>
+                    {loading ? "Carregando..." : "Recarregar Pokémons"}
+                </ReloadButton>
+            </ButtonWrapper>
 
         </>
     );

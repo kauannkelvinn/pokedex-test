@@ -1,21 +1,20 @@
-import { Header } from '../src/components/layout/Header/Header.jsx';
-import { Hero } from '../src/components/Hero/Hero.jsx';
-import { CardsGrid } from '../src/components/CardsGrid/CardsGrid.jsx';
-import { Footer } from '../src/components/layout/Footer/Footer.jsx';
-import { AppContainer, Main } from './App.styles.js';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Header } from "./components/layout/Header/Header";
+import { Footer } from "./components/layout/Footer/Footer";
+import { AppContainer } from "./App.styles";
+import { Home } from "./pages/Home/Home";
+import { PokemonDetail } from "./pages/PokemonDetail";
 
 function App() {
   return (
-    <>
       <AppContainer>
         <Header />
-        <Main>
-          <Hero />
-        </Main>
-        <CardsGrid />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/pokemon/:id" element={<PokemonDetail />} />
+        </Routes>
         <Footer />
       </AppContainer>
-    </>
   );
 }
 

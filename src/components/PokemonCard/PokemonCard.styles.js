@@ -25,6 +25,7 @@ export const Card = styled.div.attrs(props => ({
         }};
         border: 3px solid #333;
         border-radius: 20px;
+        height: 370px;
         width: 220px;
         padding: 1.5rem;
         box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.15);
