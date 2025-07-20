@@ -1,7 +1,13 @@
 import React from "react";
-import { Card, PokemonImage, PokemonName, PokemonDescription, PokemonType } from "./PokemonCard.styles"
+import {
+    Card,
+    PokemonImage,
+    PokemonName,
+    PokemonType,
+    PokemonDescription
+} from "../PokemonCard/PokemonCard.styles";
 
-export function PokemonCard({ name, image, type, description, }) {
+export function PokemonCard({ image, name, type, description }) {
     return (
         <Card type={type}>
             <PokemonImage src={image} alt={name} />
@@ -9,5 +15,5 @@ export function PokemonCard({ name, image, type, description, }) {
             <PokemonType>{type}</PokemonType>
             <PokemonDescription>{description}</PokemonDescription>
         </Card>
-    )
-};
+    );
+}

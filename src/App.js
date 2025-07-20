@@ -1,18 +1,21 @@
-import './App.css';
-import { Header } from './components/Header/Header';
- import { Hero  } from './components/Hero/Hero';
-import { CardsGrid } from './components/CardsGrid/CardsGrid';
-import { Footer } from './components/Footer/Footer';
-
+import { Header } from '../src/components/layout/Header/Header.jsx';
+import { Hero } from '../src/components/Hero/Hero.jsx';
+import { CardsGrid } from '../src/components/CardsGrid/CardsGrid.jsx';
+import { Footer } from '../src/components/layout/Footer/Footer.jsx';
+import { AppContainer, Main } from './App.styles.js';
 
 function App() {
   return (
-   <>
-    <Header />
-    <Hero /> 
-    <CardsGrid />
-    <Footer />
-   </>
+    <>
+      <AppContainer>
+        <Header />
+        <Main>
+          <Hero />
+        </Main>
+        <CardsGrid />
+        <Footer />
+      </AppContainer>
+    </>
   );
 }
 

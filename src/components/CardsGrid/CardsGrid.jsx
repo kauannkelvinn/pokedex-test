@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { PokemonCard } from "../PokemonCard/PokemonCard";
+import { Grid, ButtonWrapper, ReloadButton } from "../CardsGrid/CardsGrid.styles";
 
 export function CardsGrid() {
     const [pokemons, setPokemons] = useState([]);
@@ -73,52 +74,16 @@ export function CardsGrid() {
                         type={pokemon.type}
                     />
                 ))}
+            </Grid>
                 <ButtonWrapper>
                     <ReloadButton onClick={handleReload} disabled={loading}>
                         {loading ? "Carregando..." : "Recarregar Pokémons"}
                     </ReloadButton>
                 </ButtonWrapper>
-            </Grid>
 
         </>
     );
 }
 
-const Grid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1.5rem;
-  padding: 2rem;
-  justify-items: center;
-`;
 
-const ButtonWrapper = styled.div`
-  grid-column: 1 / -1; /* ocupa toda a linha */
-  display: flex;
-  justify-content: center;
-`;
-
-const ReloadButton = styled.button`
-  margin: 2rem auto;
-  display: block; 
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  font-weight: bold;
-  border-radius: 5px;
-  border: none;
-  background-color: #ef5350;
-  color: white;
-  transition: background-color 0.3s;
-
-  grid-column: 1 / -1;
-
-  &:hover:not(:disabled) {
-    background-color: #d32f2f;
-  }
-
-  &:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-  }
-`;
 
